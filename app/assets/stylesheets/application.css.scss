@@ -33,6 +33,7 @@
   #profile {@include span-columns(3);}
   #repositories {@include span-columns(9);}
   .repo {
+    border-top: 1px solid #eee;
     padding-top: 30px;
     padding-bottom: 30px;
     .repo-name a {
