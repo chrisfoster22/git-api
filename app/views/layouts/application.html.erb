@@ -8,6 +8,34 @@
 </head>
 <body>
 
+  <header class="navigation" role="banner">
+    <div class="navigation-wrapper">
+      <a href="javascript:void(0)" class="logo">
+        <%= image_tag "octicon.svg" %>
+      </a>
+      <div class="search-bar">
+        <form role="search">
+          <input type="search" placeholder="Enter Search" />
+          <!-- <button type="submit"> -->
+            <!-- <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon"> -->
+          </button>
+        </form>
+      </div>
+      <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+      <nav role="navigation">
+        <ul id="js-navigation-menu" class="navigation-menu show">
+          <li class="nav-link"><a href="javascript:void(0)">Explore</a></li>
+          <li class="nav-link"><a href="javascript:void(0)">Gist</a></li>
+          <li class="nav-link"><a href="javascript:void(0)">Blog</a></li>
+          <li class="nav-link"><a href="javascript:void(0)">Help</a>
+            <ul class="submenu">
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
 <%= yield %>
 
 </body>

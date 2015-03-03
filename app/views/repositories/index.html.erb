@@ -1,4 +1,15 @@
-<% @repository.each do |repo| %>
-  <div><%= repo["name"] %></div>
-  <div><%= repo["url"] %></div>
-<% end %>
+<div id="outer">
+  <div id="profile">
+    <div id="picture"><%= image_tag("profile_pic.png", size: "230")%></div>
+    <div><%= @repository[0]["owner"]["login"] %></div>
+  </div>
+  <div id="repositories">
+    <% @repository.each_with_index do |repo, num| %>
+      <div class="repo">
+        <div class= "repo-name"><%= link_to repo["name"], class: "repo-name" %></div>
+        <div class="updated-at"><%= @profile.hours_ago(num, "#{repo['updated_at']}") %></div>
+        <div class="repo-stuff"><span><%= repo["language"] %></span><%= "  " %><span><%= repo["stargazers_count"] %></span><%= "  " %><span><%= repo["forks_count"] %></span></div>
+      </div>
+    <% end %>
+  </div>
+</div>
