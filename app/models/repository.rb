@@ -15,6 +15,10 @@ class Repository
     if time == 0
       time = ((Time.now - updated_at.to_time) / 1.hour).round
       "Updated #{time} hours ago"
+      if time == 0
+        time = ((Time.now - updated_at.to_time) / 1.minute).round
+        "Updated #{time} minutes ago"
+      end
     else
       if time == 1
         "Updated 1 day ago"
